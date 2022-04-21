@@ -5,10 +5,17 @@ class Article(models.Model):
     title = models.CharField(max_length=255)
     short = models.CharField(max_length=1000, null=True)
     content = models.TextField()
+    
+    def __str__(self):
+        return self.title
 
 class ArticleImage(models.Model):
     img = models.ImageField()
+    caption = models.CharField(max_length=255, null=True, blank=True)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'IMG: {self.article.title}'
 
 class Sight(Article):
     pass
