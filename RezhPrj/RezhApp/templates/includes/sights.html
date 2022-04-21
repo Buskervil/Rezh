@@ -1,8 +1,16 @@
 <div class="sights block">
     <h2 class="block-header">Достопримечательности</h2>
     <div class="sights__carusel">
-        <div class="sights__cart-list">
-            Тут будет цикл
+        <div class="sights__cart-list block__cart-list">
+            {% for sight in sights %}
+                <div class="sights__cart cart">
+                    <img src="/media/{{ sight.images.all.0.img }}" alt="Картинка" class="sights__image">
+                    <div class="cart__description">
+                        <p class="cart__description-text">{{ sight.short }}</p>
+                    </div>
+                    
+                </div>
+            {% endfor %}
         </div>
         <div class="block__cart-list-background"></div>
     </div>

@@ -8,8 +8,7 @@ html{
     box-sizing: inherit;
 } 
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li{
-                 
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li{                 
     margin: 0;
     padding: 0;
     border: 0;
@@ -56,12 +55,16 @@ body{
     left: 0;
     width: 100%;
     z-index: 10;
+
+
 }
 
 .header__wraper{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    background-color: rgba(0, 0, 0, 0.603);
 }
 
 .header__logo{
@@ -181,5 +184,49 @@ body{
     line-height: 29px;
     color: white;
     text-decoration: none;
+}
+
+.block__cart-list{
+    position: absolute;
+    top: 365px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    height: 447px;
+    z-index: 2;
+    padding-left: 42px;
+    padding-right: 48px;
+}
+
+.cart{
+    height: 100%;
+    max-width: 596px;
+    position: relative;
+    margin-right: 21px;
+}
+
+.cart:last-child{
+    margin-right: 0;
+}
+
+.cart__description{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 146px;
+}
+
+.cart__description-text{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px 25px 0px 0px;
+}
+
+.sights__image{
+    height: 100%;
+    width: auto;
 }
 /* blocks styles end */
