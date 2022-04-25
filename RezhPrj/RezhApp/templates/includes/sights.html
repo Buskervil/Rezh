@@ -8,10 +8,10 @@
         <div class="grid block-carusel">
             {% for sight in sights|slice:":3" %}
                 <div class="carusel__cart pc-col-4">
-                    {{sight}}
-                    {{sight.images.all.0.img}}
                     <img src="/media/{{ sight.images.all.0.img }}" alt="" class="carusel__cart-img">
-                    <div class="carusel__cart-description"></div>
+                    <div class="carusel__cart-description">
+                        <span>{{sight.title}}</span>
+                    </div>
                 </div>
             {% endfor%}
             <!-- Пример наполнения, должен происходить в цикле по объектам из базы -->

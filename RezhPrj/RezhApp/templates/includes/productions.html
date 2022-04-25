@@ -8,10 +8,8 @@
         <div class="grid block-carusel">
             {% for production in productions|slice:":3" %}
                 <div class="carusel__cart pc-col-4">
-                    {{production}}
-                    {{production.images.all.0.img}}
                     <img src="/media/{{ production.images.all.0.img }}" alt="" class="carusel__cart-img">
-                    <div class="carusel__cart-description"></div>
+                    <div class="carusel__cart-description">{{production.title}}</div>
                 </div>
             {% endfor%}
              <!-- Пример наполнения должен происходить цикл-->

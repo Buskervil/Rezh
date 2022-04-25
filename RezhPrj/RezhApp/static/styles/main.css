@@ -71,7 +71,6 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li{
 
 body{
     background: #99BAEB;
-    color: white
 }
 
 .container{
@@ -172,12 +171,40 @@ body{
     margin-bottom: 110px;
 }
 
+.carusel__cart{
+    position: relative;
+}
+
 .carusel__cart-img{
     width: 100%;
     max-height: 410px;
+    height: 100%;
     object-fit: cover;
 
     border-radius: 20px;
+}
+
+.carusel__cart-description{
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    height: 146px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px 25px 20px 20px;
+
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;   
 }
 
 .block__more{
