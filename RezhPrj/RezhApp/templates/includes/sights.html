@@ -9,8 +9,8 @@
             {% for sight in sights|slice:":3" %}
                 <div class="carusel__cart pc-col-4">
                     {{sight}}
-                    {{sight.images.all.0.img.name}}
-                    <img src="/media/Дом_заводуп.jpg" alt="" class="carusel__cart-img">
+                    {{sight.images.all.0.img}}
+                    <img src="/media/{{ sight.images.all.0.img }}" alt="" class="carusel__cart-img">
                     <div class="carusel__cart-description"></div>
                 </div>
             {% endfor%}
@@ -22,11 +22,7 @@
             <div class="carusel__cart pc-col-4">
                 <img src="/img/carusel-2.png" alt="" class="carusel__cart-img">
                 <div class="carusel__cart-description"></div>
-            </div>
-            <div class="carusel__cart pc-col-4">
-                <img src="/img/carusel-3.png" alt="" class="carusel__cart-img">
-                <div class="carusel__cart-description"></div>
-            </div>                 -->
+            </div> -->
         </div>
         <div class="grid">
             <div class="empty pc-col-5"></div>

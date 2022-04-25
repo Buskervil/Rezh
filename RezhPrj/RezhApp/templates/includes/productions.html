@@ -6,6 +6,14 @@
             <h2 class="block__header pc-col-6">Производство</h2>
         </div>
         <div class="grid block-carusel">
+            {% for production in productions|slice:":3" %}
+                <div class="carusel__cart pc-col-4">
+                    {{production}}
+                    {{production.images.all.0.img}}
+                    <img src="/media/{{ production.images.all.0.img }}" alt="" class="carusel__cart-img">
+                    <div class="carusel__cart-description"></div>
+                </div>
+            {% endfor%}
              <!-- Пример наполнения должен происходить цикл-->
             <!-- <div class="carusel__cart pc-col-4">
                 <img src="/img/carusel-1.png" alt="" class="carusel__cart-img">
