@@ -6,6 +6,14 @@
             <h2 class="block__header pc-col-6">Достопримечательности</h2>
         </div>
         <div class="grid block-carusel">
+            {% for sight in sights|slice:":3" %}
+                <div class="carusel__cart pc-col-4">
+                    {{sight}}
+                    {{sight.images.all.0.img.name}}
+                    <img src="/media/Дом_заводуп.jpg" alt="" class="carusel__cart-img">
+                    <div class="carusel__cart-description"></div>
+                </div>
+            {% endfor%}
             <!-- Пример наполнения, должен происходить в цикле по объектам из базы -->
             <!-- <div class="carusel__cart pc-col-4">
                 <img src="/img/carusel-1.png" alt="" class="carusel__cart-img">
