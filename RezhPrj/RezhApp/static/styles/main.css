@@ -85,10 +85,12 @@ li {
 /* common style begn */
 html {
     scroll-behavior: smooth;
+    animation: bodyOpacityAnimation .6s;
 }
 
 body {
     background: #99BAEB;
+    
 }
 
 .hidden {
@@ -149,6 +151,24 @@ body {
     from{
         opacity: 0;
         transform: scale(150%) rotate(90deg);
+    }
+    to{
+        opacity: 100%;
+        transform: scale(100%) rotate(0);    
+    }
+}
+
+.active{
+    animation-name: blockActiveAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes bodyOpacityAnimation{
+    from{
+        opacity: 30%;
+        transform: scale(103%) rotate(.5deg);
     }
     to{
         opacity: 100%;
@@ -243,6 +263,21 @@ body {
 
 
 /* block style begin */
+@keyframes blockActiveAnimation {
+    from{
+        opacity: 0%;
+        transform: translate(0, 100px);
+    }
+    to{
+        opacity: 100%;
+        transform: translate(0, 0);
+    }
+}
+
+.opacity-start{
+    opacity: 0%;
+}
+
 .block {
     height: 970px;
     position: relative;
