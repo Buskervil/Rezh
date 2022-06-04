@@ -1,34 +1,38 @@
-<div class="production block">
-    <div class="block__carusel-background"></div>
+<div id="production" class="block production">
+    <div class="block__background"></div>
     <div class="container">
-        <div class="grid">
-            <div class="empty pc-col-3"></div>
-            <h2 class="block__header pc-col-6">Производство</h2>
+        <div class="row block__header-row">
+            <div class="col">
+                <h2 class="block__header">Производство</h2>
+            </div>
         </div>
-        <div class="grid block-carusel">
-            {% for production in productions|slice:":3" %}
-                <div class="carusel__cart pc-col-4">
-                    <img src="/media/{{ production.images.all.0.img }}" alt="" class="carusel__cart-img">
-                    <div class="carusel__cart-description">{{production.title}}</div>
+
+        <div class="row">
+            <div class="col">
+                <div class="block__carousel">
+                    {% for production in productions%}
+                    <div class="block__cart">
+                        <div href="/sight.html" class="sight__link block__link">
+                            <img src="/media/{{ production.images.all.0.img }}" alt="" class="block__cart-image radius">
+                            <div class="block__cart-caption radius">
+                                {{production.title}}
+                            </div>
+                        </div>
+                    </div>                    
+                    {% endfor %}
+                    <!-- <div class="block__cart">
+                        <a href="/sight.html" class="sight__link block__link">
+                            <img src="/img/башня.jpg" alt="" class="block__cart-image radius">
+                            <div class="block__cart-caption radius">
+                                Водонапорная башня, коих много в разных городах
+                                по всей России. В настоящее время они работают как
+                                музеи, памятники архитектуры 17-18 веков.
+                            </div>
+                        </a>
+                    </div> -->
+                    
                 </div>
-            {% endfor%}
-             <!-- Пример наполнения должен происходить цикл-->
-            <!-- <div class="carusel__cart pc-col-4">
-                <img src="/img/carusel-1.png" alt="" class="carusel__cart-img">
-                <div class="carusel__cart-description"></div>
             </div>
-            <div class="carusel__cart pc-col-4">
-                <img src="/img/carusel-2.png" alt="" class="carusel__cart-img">
-                <div class="carusel__cart-description"></div>
-            </div>
-            <div class="carusel__cart pc-col-4">
-                <img src="/img/carusel-3.png" alt="" class="carusel__cart-img">
-                <div class="carusel__cart-description"></div>
-            </div>                 -->
-        </div>
-        <div class="grid">
-            <div class="empty pc-col-5"></div>
-            <a href="#!" class="block__more pc-col-2">Узнать больше</a>
         </div>
     </div>
 </div>

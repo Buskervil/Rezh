@@ -24,7 +24,8 @@ class Production(Article):
     pass
 
 class History(Article):
-    pass
+    age = models.IntegerField(null=False)
+    nested = models.BooleanField(default=False)
 
 class Jobs(Article): # Это модель нужно будет уточнить
     company = models.CharField(max_length=255)
