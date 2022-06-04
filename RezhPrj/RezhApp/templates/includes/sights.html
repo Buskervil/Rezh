@@ -1,10 +1,32 @@
 <div class="sights block">
-    <h2 class="block-header">Достопримечательности</h2>
-    <div class="sights__carusel">
-        <div class="sights__cart-list">
-            Тут будет цикл
+    <div class="block__carusel-background"></div>
+    <div class="container">   
+        <div class="grid">
+            <div class="empty pc-col-3"></div>
+            <h2 class="block__header pc-col-6">Достопримечательности</h2>
         </div>
-        <div class="block__cart-list-background"></div>
+        <div class="grid block-carusel">
+            {% for sight in sights|slice:":3" %}
+                <div class="carusel__cart pc-col-4">
+                    <img src="/media/{{ sight.images.all.0.img }}" alt="" class="carusel__cart-img">
+                    <div class="carusel__cart-description">
+                        <span>{{sight.title}}</span>
+                    </div>
+                </div>
+            {% endfor%}
+            <!-- Пример наполнения, должен происходить в цикле по объектам из базы -->
+            <!-- <div class="carusel__cart pc-col-4">
+                <img src="/img/carusel-1.png" alt="" class="carusel__cart-img">
+                <div class="carusel__cart-description"></div>
+            </div>
+            <div class="carusel__cart pc-col-4">
+                <img src="/img/carusel-2.png" alt="" class="carusel__cart-img">
+                <div class="carusel__cart-description"></div>
+            </div> -->
+        </div>
+        <div class="grid">
+            <div class="empty pc-col-5"></div>
+            <a href="#!" class="block__more pc-col-2">Узнать больше</a>
+        </div>
     </div>
-    <a href="#" class="block-more">Узнать больше</a>
 </div>
