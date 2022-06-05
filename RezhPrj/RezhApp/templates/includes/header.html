@@ -1,33 +1,39 @@
-<header class='header' id='header'> 
+{% load static %}
+
+<header class='header' id='header'>
     <div class='container'>
-        <div class="grid">
-            <div class='header__logo pc-col-5'>
-                <a href='/' class='header__self-link'>
-                    <img src='/static/img/rezh-logo-ico.png' alt='' class='header__logo-pic'>
-                </a>
+        <div class="row">
+            <div class="col-4">
+                <div class='header__logo'>
+                    <a href='/' class='header__self-link'>
+                        <img src="{% static '/img/Logo.png' %}" alt='' class='header__logo-pic'>
+                    </a>
+                </div>
             </div>
-            <nav class='header__nav pc-col-7'>
-                <ul class='header__list'>
-                    <li class='header__item'>
-                        <a href='#' class='header__nav-link'>История</a>
-                    </li>
-                    <li class='header__item'>
-                        <a href='#' class='header__nav-link'>Достопримечательности</a>
-                    </li>
-                    <li class='header__item'>
-                        <a href='#' class='header__nav-link'>Производство</a>
-                    </li>
-                    <li class='header__item'>
-                        <a href='#' class='header__nav-link'>Вакансии</a>
-                    </li>
-                    <li class='header__item'>
-                        <a href='#' class='header__nav-link'>Карта</a>
-                    </li>
-                    <li class='header__item'>
-                        <a href='#' class='header__nav-link'>Игра</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="col-8">
+                <nav class='header__nav'>
+                    <ul class='header__list nav'>
+                        <li class='header__item nav-item'>
+                            <a href='/#intro' class='header__nav-link nav-link'>Главная</a>
+                        </li>
+                        <li class='header__item nav-item'>
+                            <a href='/#sights' class='header__nav-link nav-link'>Достопримечательности</a>
+                        </li>
+                        <li class='header__item nav-item'>
+                            <a href='/#production' class='header__nav-link nav-link'>Производство</a>
+                        </li>
+                        <li class='header__item nav-item'>
+                            <a href='/#jobs' class='header__nav-link nav-link'>Вакансии</a>
+                        </li>
+                        <li class='header__item nav-item'>
+                            <a href='/#' class='header__nav-link nav-link'>Карта</a>
+                        </li>
+                        <li class='header__item nav-item'>
+                            <a href='/#' class='header__nav-link nav-link'>Игра</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 </header>

@@ -1,0 +1,43 @@
+{% extends 'RezhApp/base.html' %}
+{% load static %}
+{% block title %}
+{{sight.title}}
+{% endblock %}
+
+{% block styles %} 
+<link rel="stylesheet" type="text/css" href="{% static 'styles/sight.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="block sight">
+    <div class="block__background"></div>
+    <div class="container">
+        <div class="row block__header-row">
+            <a href="/#sights" class="back-arrow col-1"></a>
+            <h2 class="sight__header col-10">{{sight}}</h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="block__carousel">
+                    {% for img in sight.images.all %}
+                    <div class="block__cart">
+                        <div class="sight__link block__link">
+                            <img src="{% get_media_prefix%}{{img.img}}" alt="" class="block__cart-image radius">
+                            <div class="block__cart-caption radius">
+                                {{img.caption}}
+                            </div>
+                        </div>
+                    </div>                    
+                    {% endfor %}                   
+                </div>
+            </div>
+        </div>
+
+        <div class="sight__about">
+            <p class="sight__content">
+                {{ sight.content}}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
