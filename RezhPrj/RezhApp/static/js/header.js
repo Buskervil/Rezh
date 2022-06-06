@@ -3,7 +3,7 @@ function headerChanger(){
     let mainH = document.querySelector('.intro__header span');
     console.log(mainH)
     i = 0;
-    headerVariance = [' - город возможностей', ' - это наш проект', ' - и кому он нужен'];
+    headerVariance = [' - город мастеров', ' - промышленная столица Урала', ' - место силы', ' - богатство истории', ' - это по любви'];
 
     setInterval(() => {        
         mainH.style.animation = "opacityAnimation 3s";

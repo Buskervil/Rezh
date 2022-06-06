@@ -38,3 +38,6 @@ def history(request, id):
 
 def map(request):
     return HttpResponse("Карта")
+
+def victorina(request):
+    return render(request, 'RezhApp/victorina.html')

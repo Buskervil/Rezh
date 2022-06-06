@@ -1,0 +1,48 @@
+{% extends 'RezhApp/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/victorina.css' %}" />
+{% endblock %}
+{% block content %}
+    <div class="vic-intro">
+        <div class="container">
+            <div class="row block__header-row">
+                <div class="col-2">
+                    <a class="hi-radius-btn" href="/victorina.html">
+                        История
+                    </a>
+                </div>
+                <div class="col-8">
+                    <h1 class="vic-intro__header block__header">Викторина</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="quiz">
+                    <div class="quiz__head">
+                        <div class="question__title" id="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus odit accusamus, illum quas magni provident odio praesentium commodi sint, porro harum, minus cupiditate architecto culpa aut ex dolore officia.</div>
+                    </div>
+                    <div class="col-4 offset-1 test">
+                        <img id="image" src="баден 1.jpg">
+                        <fieldset class="answers__fields">
+                            <div class="buttons">
+                                <div class="buttons__content" id="buttons">
+                                    <button class="button">Default button</button><br>
+                                    <button class="button button_wrong">Wrong answer</button><br>
+                                    <button class="button button_correct">Correct answer</button><br>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                <div class="hints" id="hint"> </div>
+                <div class="quiz__footer">
+                    <div class="low-radius col-2 offset-5" id="pages">0 / 0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
