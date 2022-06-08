@@ -126,3 +126,13 @@
     align-items: center;
     overflow: hidden;
 }
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button:last-of-type{
+    margin-bottom: 0;
+}
