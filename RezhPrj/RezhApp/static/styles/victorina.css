@@ -46,7 +46,7 @@
 }
 
 .answers__fields{
-    height: 420px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,10 +77,10 @@
 
     border: none;
     text-align: center;
-    min-width: 400px;
+    min-width: 100%;
 }
 .quiz__footer {
-    margin-top: 60px;
+
 }
 
 .button_wrong
@@ -91,9 +91,6 @@
 .button_correct
 {
     background: #0AC7D3;
-}
-.test {
-    margin-bottom: 50px;
 }
 
 .quiz__head {
@@ -113,4 +110,16 @@
     width: 100%;
     height: 100%;
     align-self: center;
+    display:block;
+}
+.quiz_container{
+    margin-bottom:30px;
+    height:420px;
+}
+.image_container{
+    height:100%;
+    weight:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
