@@ -103,23 +103,26 @@
 .hints{
     text-align: center;
 }
+
 .quiz_image {
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
     align-self: center;
     display:block;
 }
+
 .quiz_container{
     margin-bottom:30px;
     height:420px;
 }
+
 .image_container{
-    height:100%;
-    weight:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    height: 420px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
