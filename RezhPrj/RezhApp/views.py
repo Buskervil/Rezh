@@ -37,7 +37,7 @@ def history(request, id):
     return render(request, 'RezhApp/history.html', context=data)
 
 def map(request):
-    return HttpResponse("Карта")
+    return render(request, 'RezhApp/map.html')
 
 def victorina(request):
     return render(request, 'RezhApp/victorina.html')

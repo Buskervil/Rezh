@@ -1,0 +1,17 @@
+.map-intro {
+    margin-top: 150px;
+}
+.map{
+    text-align: center;
+}
+.map__title{
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 48px;
+    align-items: center;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 36px;
+}
