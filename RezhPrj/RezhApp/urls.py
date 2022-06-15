@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.main, name='main_page'),
     path('map/', views.map, name='map_page'),
     path('sight/<int:id>', views.sight, name='sight_page'),
+    path('job/<int:id>', views.job, name='job_page'),
     path('history/<int:id>', views.history, name='history_page'),
     path('victorina/', views.victorina, name='victorina_page'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
