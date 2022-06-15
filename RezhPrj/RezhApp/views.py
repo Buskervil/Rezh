@@ -1,15 +1,17 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Sight, Production, History
+from .models import Sight, Production, History, Jobs
 
 def main(request):
     sights = Sight.objects.all()
     productions = Production.objects.all()
     histories = History.objects.all()
+    jobs = Jobs.objects.all()
     data = {
         'sights' : sights,
         'productions' : productions,
-        'histories' : histories
+        'histories' : histories,
+        'jobs' : jobs
     }
     return render(request, 'RezhApp/main.html', context=data)
 
@@ -37,4 +39,14 @@ def history(request, id):
     return render(request, 'RezhApp/history.html', context=data)
 
 def map(request):
-    return HttpResponse("Карта")
+    return render(request, 'RezhApp/map.html')
+
+def victorina(request):
+    return render(request, 'RezhApp/victorina.html')
+
+def job(request, id):
+    job = Jobs.objects.get(id=id)
+    data = {
+        'job' : job
+    }
+    return render(request, 'RezhApp/job.html', context=data)

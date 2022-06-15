@@ -1,0 +1,65 @@
+{% extends 'RezhApp/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/victorina.css' %}" />
+{% endblock %}
+{% block content %}
+    <div class="vic-intro">
+        <div class="container">
+            <div class="row block__header-row">
+                <div class="col-2">
+                    <a class="hi-radius-btn" href="/#history">
+                        История
+                    </a>
+                </div>
+                <div class="col-8">
+                    <h1 class="vic-intro__header block__header">Викторина</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="quiz">
+        <div class="container">
+            <div class="row">
+                <div class="quiz__head col-10 offset-1">
+                    <div class="question__title" id="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus odit accusamus, illum quas magni provident odio praesentium commodi sint, porro harum, minus cupiditate architecto culpa aut ex dolore officia.</div>
+                </div>
+            </div>
+            <div class="row quiz_container">
+                <div class="col-5 offset-1">
+                    <div class="image_container">
+                        <img class="quiz_image " id="image" src="/static/img/первый вопрос.jpg">
+                        <img class="quiz_image" id="image1" src="/static/img/второй вопрос.jpg" style="display:none">
+                        <img class="quiz_image" id="image2" src="/static/img/третий вопрос.jpg" style="display:none">
+                        <img class="quiz_image" id="image3" src="/static/img/четвертый вопрос.jpg" style="display:none">
+                        <img class="quiz_image" id="image4" src="/static/img/пятый вопрос.jpg" style="display:none">
+                        <img class="quiz_image" id="image5" src="/static/img/шестой вопрос.jpg" style="display:none">
+                        <img class="quiz_image" id="image6" src="/static/img/седьмой вопрос.jpg" style="display:none">
+                        <img class="quiz_image" id="image7" src="/static/img/восьмой вопрос.jpg" style="display:none">
+                        <img class="quiz_image" id="image8" src="/static/img/девятый вопрос.jpg" style="display:none">
+                        <img class="quiz_image" id="image9" src="/static/img/десятый вопрос.jpg" style="display:none">
+                    </div>
+                </div>
+                <div class="col-4 offset-1">
+                    <fieldset class="answers__fields">
+                        <div id="buttons" class="buttons buttons__content">
+
+                                <button class="button">Default button</button><br>
+                                <button class="button button_wrong">Wrong answer</button><br>
+                                <button class="button button_correct">Correct answer</button><br>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="hints" id="hint"> </div>
+            </div>
+            <div class="row">
+                <div class="quiz__footer">
+                    <div class="low-radius col-2 offset-5" id="pages">0 / 0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

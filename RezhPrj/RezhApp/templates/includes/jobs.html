@@ -5,72 +5,25 @@
             <h2 class="block__header">Вакансии</h2>
         </div>
         <div class="jobs__carts row">
-            <div class=" col">
-                <div class="jobs__item">
-                    <div class="cart__caption">
-                        Рабочий в шахту
-                    </div>                        
-                    <div class="cart__break-line"></div>
-                    <div class="cart__description">
-                        Махать киркой в темноте долго, добывать уголь
+            <div class="col">
+                <div class="block__carousel">
+                    {% for job in jobs %}
+                    <div class="col-3">
+                        <a href="{% url 'job_page' id=job.id %}" class="job-link">
+                            <div class="jobs__item">
+                                <div class="cart__caption">
+                                    {{job.title}}
+                                </div>
+                                <div class="cart__break-line"></div>
+                                <div class="cart__description">
+                                    {{job.content|truncatewords:25}}
+                                </div>
+                            </div>
+                        </a>
                     </div>
+                    {% endfor %}
                 </div>
-            </div>            
-            <div class=" col">
-                <div class="jobs__item">
-                    <div class="cart__caption">
-                        Рабочий в шахту
-                    </div>                        
-                    <div class="cart__break-line"></div>
-                    <div class="cart__description">
-                        Махать киркой в темноте долго, добывать уголь
-                    </div>
-                </div>
-            </div>      
-            <div class=" col">
-                <div class="jobs__item">
-                    <div class="cart__caption">
-                        Рабочий в шахту
-                    </div>                        
-                    <div class="cart__break-line"></div>
-                    <div class="cart__description">
-                        Махать киркой в темноте долго, добывать уголь
-                    </div>
-                </div>
-            </div>      
-            <div class=" col">
-                <div class="jobs__item">
-                    <div class="cart__caption">
-                        Рабочий в шахту
-                    </div>                        
-                    <div class="cart__break-line"></div>
-                    <div class="cart__description">
-                        Махать киркой в темноте долго, добывать уголь
-                    </div>
-                </div>
-            </div>      
-            <div class=" col">
-                <div class="jobs__item">
-                    <div class="cart__caption">
-                        Рабочий в шахту
-                    </div>                        
-                    <div class="cart__break-line"></div>
-                    <div class="cart__description">
-                        Махать киркой в темноте долго, добывать уголь
-                    </div>
-                </div>
-            </div>      
-            <div class=" col">
-                <div class="jobs__item">
-                    <div class="cart__caption">
-                        Рабочий в шахту
-                    </div>                        
-                    <div class="cart__break-line"></div>
-                    <div class="cart__description">
-                        Махать киркой в темноте долго, добывать уголь
-                    </div>
-                </div>
-            </div>      
+            </div>
         </div>
     </div>
 </div>
