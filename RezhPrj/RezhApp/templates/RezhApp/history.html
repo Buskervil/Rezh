@@ -4,7 +4,7 @@
 {{history.title}}
 {% endblock %}
 
-{% block styles %} 
+{% block styles %}
 <link rel="stylesheet" type="text/css" href="{% static 'styles/history.css' %}" />
 {% endblock %}
 
@@ -15,27 +15,30 @@
             <a href="/index.html" class="back-arrow col-1"></a>
             <h2 class="block__header col-10">{{histories.0.title}}</h2>
         </div>
-        <div class="row">
+        <div class="row gy-4 history-block">
             {%for history in histories%}
-                    <div class="history-block">
-                        <div class="history__image-caption col-7 {% if forloop.counter|divisibleby:2 %} order-2 {% endif %}">
-                            <p class="image-caption__content">{{history.content}}</p>
-                        </div>
-                        <div class="col-5 history__image-container">
-                            <img src="{% get_media_prefix%}{{history.images.all.0.img}}" class=" history__image radius" alt="">
-                        </div>                    
-                    </div>   
-            {%endfor%}      
+
+            <div
+                class="history__image-caption col-lg-7 col-12 {% if forloop.counter|divisibleby:2 %} order-2 {% endif %}">
+                <p class="image-caption__content">{{history.content}}</p>
+            </div>
+            <div class="col-lg-5 col-12 history__image-container">
+                <img src="{% get_media_prefix%}{{history.images.all.0.img}}" class=" history__image radius" alt="">
+            </div>
+
+            {%endfor%}
         </div>
 
         <div class="row justify-content-center">
             {% if prev_history|length > 0 %}
-            <a href="/history/{{prev_history.0.id}}" class="history-btn prev-history-btn col-6">{{prev_history.0.title}}</a>
+            <a href="/history/{{prev_history.0.id}}"
+                class="history-btn prev-history-btn col-6">{{prev_history.0.title}}</a>
             {%endif%}
             {% if next_history|length > 0 %}
-                <a href="/history/{{next_history.0.id}}" class="history-btn next-history-btn col-6">{{next_history.0.title}}</a>
+            <a href="/history/{{next_history.0.id}}"
+                class="history-btn next-history-btn col-6">{{next_history.0.title}}</a>
             {%endif%}
-        </div>            
+        </div>
     </div>
 </div>
 {% endblock %}

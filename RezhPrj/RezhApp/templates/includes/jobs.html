@@ -6,7 +6,7 @@
         </div>
         <div class="jobs__carts row">
             <div class="col">
-                <div class="block__carousel">
+                <div class="block__carousel overflow-hidden">
                     {% for job in jobs %}
                     <div class="col-3">
                         <a href="{% url 'job_page' id=job.id %}" class="job-link">

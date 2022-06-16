@@ -8,7 +8,7 @@ $(document).ready(function () {
     autoplaySpeed: 4000,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -16,7 +16,7 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

@@ -19,4 +19,4 @@ function scrollTrigger(selector, options = {}) {
     observer.observe(el)
   }
  
-scrollTrigger('.scroll-reveal', { rootMargin: '-200px' })
+scrollTrigger('.scroll-reveal', { rootMargin: '-100px' })

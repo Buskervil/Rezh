@@ -1,5 +1,27 @@
 {% load static %}
 
+<div class="container-fluid tablet-nav-container">
+    <div class="tablet-nav d-flex flex-column">
+        <div class='header__item nav-item'>
+            <a href='/#intro' class='header__nav-link nav-link' onclick="closeTabletMeny()">Главная</a>
+        </div>
+        <div class='header__item nav-item'>
+            <a href='/#sights' class='header__nav-link nav-link' onclick="closeTabletMeny()">Достопримечательности</a>
+        </div>
+        <div class='header__item nav-item'>
+            <a href='/#production' class='header__nav-link nav-link' onclick="closeTabletMeny()">Производство</a>
+        </div>
+        <div class='header__item nav-item'>
+            <a href='/#jobs' class='header__nav-link nav-link' onclick="closeTabletMeny()">Вакансии</a>
+        </div>
+        <div class='header__item nav-item'>
+            <a href='/map' class='header__nav-link nav-link' onclick="closeTabletMeny()">Карта</a>
+        </div>
+        <div class='header__item nav-item'>
+            <a href='/#' class='header__nav-link nav-link' onclick="closeTabletMeny()">Игра</a>
+        </div>
+    </div>
+</div>
 <header class='header' id='header'>
     <div class='container'>
         <div class="row">
@@ -11,6 +33,11 @@
                 </div>
             </div>
             <div class="col-8">
+                <div class="burger-container" onclick="burgerOnClick()">
+                    <div class="d-flex justify-content-end h-100 align-items-center">
+                        <div class="burger"></div>
+                    </div>
+                </div>
                 <nav class='header__nav'>
                     <ul class='header__list nav'>
                         <li class='header__item nav-item'>
