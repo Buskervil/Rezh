@@ -2,28 +2,33 @@
     <div class="container">
         <div class="row block__header-row">
             <div class="col-2">
-                <a class="hi-radius-btn" href="/victorina">
-                    Викторина
-                </a>
+                <div class="d-flex h-100 justify-content-center align-items-center">
+                    <a class="hi-radius-btn" href="/victorina">
+                        Викторина
+                    </a>
+                </div>
             </div>
             <div class="col-8">
-                <h2 class="block__header">История</h2>
+                <div class="d-flex h-100 justify-content-center align-items-center">
+                    <h2 class="block__header">История</h2>
+                </div>
+
             </div>
         </div>
         <div class="row gy-4">
             {% for history in histories%}
-                {%if not history.nested %}
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="block__cart history__cart">
-                            <a href="/history/{{history.id}}" class="block__link">
-                                <img src="/media/{{ history.images.all.0.img }}" alt="" class="block__cart-image radius">
-                                <div class="block__cart-caption radius">
-                                    {{history.title}}
-                                </div>
-                            </a>
+            {%if not history.nested %}
+            <div class="col-lg-3 col-sm-6">
+                <div class="block__cart history__cart">
+                    <a href="/history/{{history.id}}" class="block__link">
+                        <img src="/media/{{ history.images.all.0.img }}" alt="" class="block__cart-image radius">
+                        <div class="block__cart-caption radius">
+                            {{history.title}}
                         </div>
-                    </div>
-                {%endif%}
+                    </a>
+                </div>
+            </div>
+            {%endif%}
             {% endfor %}
         </div>
     </div>
