@@ -1,6 +1,7 @@
 const headElem = document.getElementById("head");
 const buttonsElem = document.getElementById("buttons");
 const pagesElem = document.getElementById("pages");
+const reloadButton = document.getElementById("reload");
 
 //Класс, который представляет сам тест
 class Quiz
@@ -245,7 +246,15 @@ function Update()
 
             btn.setAttribute("index", i);
 
-            buttonsElem.appendChild(btn);
+            buttonsElem.appendChild(btn);            
+        }
+        let btns = document.querySelectorAll('.button')
+        for (let i = 0; i < btns.length; i++){
+            btns[i].onclick = () => {
+                for (let j = 0; j < btns.length; j++){
+                    btns[j].setAttribute('disabled', true)
+                }
+            }
         }
 
         //Выводим номер текущего вопроса
@@ -260,8 +269,14 @@ function Update()
         buttonsElem.innerHTML = "";
         headElem.innerHTML = quiz.results[quiz.result].text;
         pagesElem.innerHTML = "Очки: " + quiz.score;
+
+        reloadButton.style = "display:block";
     }
 }
+
+reloadButton.onclick = function() {
+    document.location.reload();
+  };
 
 function Init()
 {
@@ -308,7 +323,6 @@ function Click(index)
         //Иначе просто подсвечиваем зелёным ответ пользователя
         btns[index].className = "button button_correct";
     }
-
     //Ждём и обновляем тест
     setTimeout(hintsHT, 500);
     setTimeout(Update, 4000);
@@ -317,6 +331,7 @@ function Click(index)
         hint.innerHTML = ""
     },4000);
 }
+
 var r=0;
 var image=document.getElementById("image");
 // Добавте свои картинки через запятую
