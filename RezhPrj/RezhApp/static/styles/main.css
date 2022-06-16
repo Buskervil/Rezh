@@ -179,7 +179,6 @@ body {
 
 /* header style begin */
 .header {
-    height: 150px;
     position: fixed;
     top: 0;
     left: 0;
@@ -194,6 +193,7 @@ body {
     font-weight: 400;
     font-size: 20px;
     z-index: 10;
+    padding: 40px 0;
 
     transition-duration: .6s;
 }
@@ -270,7 +270,7 @@ body {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
-    font-size: 96px;
+    font-size: 100px;
     color: white;
 }
 
@@ -300,7 +300,7 @@ body {
 }
 
 .block {
-    height: 970px;
+    height: 900px;
     position: relative;
 }
 
@@ -480,5 +480,3 @@ body {
 .history__cart {
     height: 230px;
 }
-
-/* history style end */

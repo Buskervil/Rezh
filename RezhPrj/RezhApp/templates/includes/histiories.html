@@ -10,10 +10,10 @@
                 <h2 class="block__header">История</h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row gy-4">
             {% for history in histories%}
                 {%if not history.nested %}
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="block__cart history__cart">
                             <a href="/history/{{history.id}}" class="block__link">
                                 <img src="/media/{{ history.images.all.0.img }}" alt="" class="block__cart-image radius">

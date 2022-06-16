@@ -19,6 +19,6 @@ from django.urls import include, path
 from RezhApp import urls
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin-login/', admin.site.urls),
     path('', include(urls))
 ]
