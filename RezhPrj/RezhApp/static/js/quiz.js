@@ -248,11 +248,9 @@ function Update()
 
             buttonsElem.appendChild(btn);            
         }
-        let btns = document.querySelectorAll('button')
+        let btns = document.querySelectorAll('.button')
         for (let i = 0; i < btns.length; i++){
             btns[i].onclick = () => {
-                console.log('Устанавливаем обработчик')
-                console.log(btns)
                 for (let j = 0; j < btns.length; j++){
                     btns[j].setAttribute('disabled', true)
                 }
