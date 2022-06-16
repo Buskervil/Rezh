@@ -90,11 +90,15 @@ html {
 
 body {
     background: #99BAEB;
-    
+
 }
 
 .hidden {
     opacity: 0;
+}
+
+.none {
+    display: none;
 }
 
 .background-transparent {
@@ -110,7 +114,6 @@ body {
 
 .hi-radius-btn {
     display: block;
-    margin-top: 20px;
 
     color: rgb(255, 255, 255);
     background: #5C87C8;
@@ -147,39 +150,41 @@ body {
     border-radius: 20px;
 }
 
-@keyframes opacityAnimation{
-    from{
+@keyframes opacityAnimation {
+    from {
         opacity: 0;
         transform: scale(150%) rotate(90deg);
     }
-    to{
+
+    to {
         opacity: 100%;
-        transform: scale(100%) rotate(0);    
+        transform: scale(100%) rotate(0);
     }
 }
 
-.active{
+.active {
     animation-name: blockActiveAnimation;
     animation-duration: .6s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
 }
 
-@keyframes bodyOpacityAnimation{
-    from{
+@keyframes bodyOpacityAnimation {
+    from {
         opacity: 30%;
         transform: scale(103%) rotate(.5deg);
     }
-    to{
+
+    to {
         opacity: 100%;
-        transform: scale(100%) rotate(0);    
+        transform: scale(100%) rotate(0);
     }
 }
+
 /* common style end */
 
 /* header style begin */
 .header {
-    height: 150px;
     position: fixed;
     top: 0;
     left: 0;
@@ -194,6 +199,7 @@ body {
     font-weight: 400;
     font-size: 20px;
     z-index: 10;
+    padding: 40px 0;
 
     transition-duration: .6s;
 }
@@ -203,6 +209,40 @@ body {
     flex-wrap: wrap;
     list-style: none;
     align-self: center;
+}
+
+.burger-container {
+    height: 100%;
+    display: none;
+}
+
+.burger {
+    height: 40px;
+    width: 40px;
+    background: url(/static/img/menu.png) no-repeat center;
+    background-size: 40px;
+    cursor: pointer;
+}
+
+.tablet-nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(25, 25, 30);
+    z-index: 999;
+    transform: translate(0, -20px);
+    transition-duration: .7s;
+    display: none;
+    opacity: 0;
+}
+
+.tablet-nav {
+    height: 100vh;
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 5vw;
+    position: relative;
 }
 
 .header__item:last-child {
@@ -232,24 +272,24 @@ body {
     justify-content: center;
 }
 
-.intro__video-wraper{
+.intro__video-wraper {
     width: 100%;
     height: 1000px;
     overflow: hidden;
     position: absolute;
 }
 
-.intro__video{
+.intro__video {
     position: absolute;
-    top: 50%; 
+    top: 50%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    min-width: 100%; 
-    min-height: 100%; 
-    width: auto; 
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
     height: auto;
-    z-index: -1000; 
+    z-index: -1000;
     overflow: hidden;
 }
 
@@ -270,7 +310,7 @@ body {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
-    font-size: 96px;
+    font-size: 100px;
     color: white;
 }
 
@@ -285,22 +325,23 @@ body {
 
 /* block style begin */
 @keyframes blockActiveAnimation {
-    from{
+    from {
         opacity: 0%;
         transform: translate(0, 100px);
     }
-    to{
+
+    to {
         opacity: 100%;
         transform: translate(0, 0);
     }
 }
 
-.opacity-start{
+.opacity-start {
     opacity: 0%;
 }
 
 .block {
-    height: 970px;
+    height: 900px;
     position: relative;
 }
 
@@ -336,7 +377,7 @@ body {
 }
 
 .block__carousel {
-    height: 310px;
+    height: 400px;
 }
 
 .block__cart {
@@ -359,7 +400,7 @@ body {
     transition-duration: .7s;
 }
 
-.block__cart:hover .block__cart-image{
+.block__cart:hover .block__cart-image {
     transform: scale(1.025);
     align-self: center;
 }
@@ -433,12 +474,12 @@ body {
     overflow: hidden;
 }
 
-.job-link{
+.job-link {
     text-decoration: none;
     color: black
 }
 
-.job-link:hover{
+.job-link:hover {
     color: rgb(26, 95, 191)
 }
 
@@ -480,5 +521,3 @@ body {
 .history__cart {
     height: 230px;
 }
-
-/* history style end */

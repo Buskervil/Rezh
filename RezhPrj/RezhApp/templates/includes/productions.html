@@ -9,7 +9,7 @@
 
         <div class="row">
             <div class="col">
-                <div class="block__carousel">
+                <div class="block__carousel overflow-hidden">
                     {% for production in productions%}
                     <div class="block__cart">
                         <div href="/sight.html" class="sight__link block__link">
@@ -18,19 +18,8 @@
                                 {{production.title}}
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                     {% endfor %}
-                    <!-- <div class="block__cart">
-                        <a href="/sight.html" class="sight__link block__link">
-                            <img src="/img/башня.jpg" alt="" class="block__cart-image radius">
-                            <div class="block__cart-caption radius">
-                                Водонапорная башня, коих много в разных городах
-                                по всей России. В настоящее время они работают как
-                                музеи, памятники архитектуры 17-18 веков.
-                            </div>
-                        </a>
-                    </div> -->
-                    
                 </div>
             </div>
         </div>
