@@ -136,3 +136,28 @@
 .button:last-of-type{
     margin-bottom: 0;
 }
+
+.reload{
+    cursor: pointer;
+    align-self:center;
+    background: #5C87C8;
+    border-radius: 30px;
+    padding: 16px;
+    padding-left: 30px;
+
+    margin-bottom: 27px;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    border: none;
+    text-align: center;
+    width:500px;
+    display:flex;
+    justify-content:center;
+}
